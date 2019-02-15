@@ -7,5 +7,5 @@ import java.lang.annotation.*;
 @Documented
 public @interface RequestPath {
     String value() default "";
-    String methed() default "GET";
+    RequestMethed methed() default RequestMethed.GET;
 }
