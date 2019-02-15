@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <envir>
+        <envirName>测试</envirName>
+        <introduction>xi嘻嘻嘻我去饿</introduction>
+        <applications>
+            <application>
+                <appName>qwerqw</appName>
+                <appUrl>https://blog.csdn.net/a639735331/article/details/73201675</appUrl>
+                <introduction>qwe人情案是当年</introduction>
+            </application>
+            <application>
+                <appName>百度</appName>
+                <appUrl>https://www.baidu.com</appUrl>
+                <introduction>百度搜索请问</introduction>
+            </application>
+        </applications>
+    </envir>
+    <envir>
+        <envirName>压测</envirName>
+        <introduction>hq请问发内额外</introduction>
+        <applications>
+            <application>
+                <appName>qwerqw</appName>
+                <appUrl>https://blog.csdn.net/a639735331/article/details/73201675</appUrl>
+                <introduction>qwe人情案是当年</introduction>
+            </application>
+            <application>
+                <appName>百度</appName>
+                <appUrl>https://www.baidu.com</appUrl>
+                <introduction>百度搜索请问</introduction>
+            </application>
+        </applications>
+    </envir>
+
+</root>

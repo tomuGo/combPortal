@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台门户</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.1.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.1.0/js/bootstrap.js"></script>
+    <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    &lt;!&ndash; 引入组件库 &ndash;&gt;
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+</head>
+
+<body >
+<div th:insert="~{header :: nav}"></div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-3" >
+            <div class="list-group" th:each="obj,iterStat:${envir}" >
+                <a href="#" th:id="${iterStat.index}" class="list-group-item list-group-item-action flex-column align-items-start" data-toggle="list" th:onclick="'changeActive('+${iterStat.index}+')'">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" th:text="${obj.envirName}"></h5>
+                        <!--<small>3 days ago</small>-->
+                    </div>
+                    <!--<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>-->
+                    <small th:text="${obj.introduction}"></small>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-9" >
+            <div class="list-group" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="world">
+
+    <div class="cube" tabindex="0">
+
+    </div>
+</div>-->
+
+
+</body>
+
+
+<script>
+    //window.onload=function(){alert($)}
+    function changeActive(index){
+        document.getElementById(index).className +=' active ';
+        alert("1")
+    }
+
+</script>
+
+</html>
