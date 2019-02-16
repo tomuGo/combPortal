@@ -29,9 +29,11 @@ public class MiniSpringApplication {
 
     private static final String PROPERTIES_PATH = "src/main/resources/application.yml";
 
-    public static void run() {
+    public static void run(Class<?>mainClazz) {
         try {
             ConfigProperities config = initializeConfig();
+            BeanContainer.getInstance().loadAnnotations(mainClazz.getPackage().getName());
+
             startTomcat(config.getPort());
         } catch (Exception e) {
             log.info("启动失败,原因:{},具体请查看错误日志", e.getMessage());
