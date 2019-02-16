@@ -28,10 +28,10 @@ public class MiniSpringUtils {
         System.out.println(configProperities.toString());
     }
 
-    public static void readAnnotation(){
+    public static void readAnnotation() {
         Class<CombController> clazz = CombController.class;
-        Method[] methods=clazz.getDeclaredMethods();
-        for(Method method:methods){
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method : methods) {
             /*RequestPath requestPath=method.getAnnotation(RequestPath.class);
             if(requestPath!=null){
                 System.out.println(method.getName());

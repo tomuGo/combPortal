@@ -20,10 +20,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
-* @Author wangyiming1031@aliyun.com 
-* @Description 
-* @Date 2019/1/15 17:34 
-**/
+ * @Author wangyiming1031@aliyun.com
+ * @Description
+ * @Date 2019/1/15 17:34
+ **/
 @Slf4j
 public class MiniSpringApplication {
 
@@ -34,8 +34,8 @@ public class MiniSpringApplication {
             ConfigProperities config = initializeConfig();
             startTomcat(config.getPort());
         } catch (Exception e) {
-            log.info("启动失败,原因:{},具体请查看错误日志",e.getMessage());
-            log.error("{}",e);
+            log.info("启动失败,原因:{},具体请查看错误日志", e.getMessage());
+            log.error("{}", e);
         }
 
     }
@@ -44,7 +44,7 @@ public class MiniSpringApplication {
         return MiniSpringUtils.readProperties(PROPERTIES_PATH);
     }
 
-    private static void startTomcat(){
+    private static void startTomcat() {
 
     }
 

@@ -14,15 +14,15 @@ import java.util.List;
 @WebFilter(urlPatterns = "/*", filterName = "combFilter")
 public class CombFilter implements Filter {
 
-    private static List<Envirment> envirments =new ArrayList<>();
+    private static List<Envirment> envirments = new ArrayList<>();
 
-    public static final String ENVIR_ATTRIBUTE ="envirments";
+    public static final String ENVIR_ATTRIBUTE = "envirments";
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         try {
             envirments = XmlUtil.readApplicationXml();
-            filterConfig.getServletContext().setAttribute(ENVIR_ATTRIBUTE,envirments);
+            filterConfig.getServletContext().setAttribute(ENVIR_ATTRIBUTE, envirments);
         } catch (DocumentException e) {
             e.printStackTrace();
         }

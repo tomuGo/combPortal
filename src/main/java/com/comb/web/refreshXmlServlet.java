@@ -18,7 +18,7 @@ public class refreshXmlServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
         WebContext context = new WebContext(request, response, request.getServletContext());
-        request.getServletContext().setAttribute(CombFilter.ENVIR_ATTRIBUTE,"1234");
+        request.getServletContext().setAttribute(CombFilter.ENVIR_ATTRIBUTE, "1234");
         //context.setVariable("envir",o);
         //envirments = XmlUtil.readApplicationXml();
         engine.process("index", context, response.getWriter());

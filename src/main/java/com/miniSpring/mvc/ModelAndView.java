@@ -1,4 +1,4 @@
-package com.miniSpring.model;
+package com.miniSpring.mvc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
